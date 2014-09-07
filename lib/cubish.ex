@@ -1,0 +1,2 @@
+defmodule Cubish do
+end
