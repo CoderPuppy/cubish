@@ -11,7 +11,10 @@ defmodule Cubish.Mixfile do
 	# Configuration for the OTP application
 	#
 	# Type `mix help compile.app` for more information
-	def application, do: [applications: [:logger]]
+	def application, do: [
+		applications: [:logger],
+		mod: {Cubish, []}
+	]
 
 	# Dependencies can be Hex packages:
 	#

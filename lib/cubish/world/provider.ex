@@ -1,5 +1,5 @@
 defprotocol Cubish.World.Provider do
-	def generator(provider, cx, cy, cz)
+	def generator(provider, cpos)
 end
 
 defmodule Cubish.World.Provider.Empty do
@@ -7,5 +7,5 @@ defmodule Cubish.World.Provider.Empty do
 end
 
 defimpl Cubish.World.Provider, for: Cubish.World.Provider.Empty do
-	def generator(_self, _cx, _cy, _cz), do: %Cubish.Chunk.Generator.Empty{}
+	def generator(_self, _cpos), do: %Cubish.Chunk.Generator.Empty{}
 end
